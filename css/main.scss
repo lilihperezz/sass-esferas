@@ -1,0 +1,60 @@
+@import "_variable";
+@import "mixin";
+@import "_esfera";
+
+* {
+	box-sizing : border-box;
+}
+body{
+	background-image:url(../img/shenlong.jpg);
+	background-position:center;
+
+}
+.container {
+	background: transparent;
+	background-position:center;
+	@include on-circle($item-count: 7, $circle-size: 20em, $item-size: 6em);
+	margin: 6rem auto; 
+}
+  
+
+	.esfera{
+		background: $color-esfera;
+		border-radius: $base-tamanio-esfera/2;
+		height: $base-tamanio-esfera;
+		width: $base-tamanio-esfera;
+		padding: $base-tamanio-esfera/4;
+		box-shadow: 0px 0px 30px yellow;
+	}
+	.estrella-1{
+		@include star-center(30px,30px);
+		@include star(15px);
+	}
+	.estrella-2{
+		@include star-center(30px,30px);
+		@include star(12px);
+		
+	}
+	.estrella-3{
+		@include star-center(30px,30px);
+		@include star(10px);
+	}
+
+	.estrella-4{
+		@include star-center(18px,18px);
+		@include star(14px);
+	}
+	.estrella-5{
+		@include star-center(20px,20px);
+		@include star(12px);
+		
+	}
+	.estrella-6{
+		@include star-center(20px,20px);
+		@include star(12px);
+	}
+	.estrella-7{
+		@include star-center(18px,18px);
+		@include star(11px);
+	}
+
